@@ -1,0 +1,8 @@
+# This is project is built with python, so these python libraries are necessary to uses this program
+# Image processing library
+pillow  # For image opening, manipulation, and saving
+
+# Numerical operations library
+numpy  # For handling image arrays and mathematical operations
+
+# We add additional libraries as will scale this project
