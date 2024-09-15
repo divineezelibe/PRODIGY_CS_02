@@ -62,7 +62,7 @@ def main():
     key = args.key
 
     if args.decrypt:
-        decrypt_image("encrypted_" + image_path, key)
+        decrypt_image(image_path, key)
     else:
         encrypt_image(image_path, key)
 
