@@ -48,8 +48,8 @@ License:
 
 """
 import argparse
-from encrypt import encrypt_image
-from decrypt import decrypt_image
+from encrypt_image import encrypt_image
+from decrypt_image import decrypt_image
 
 def main():
     parser = argparse.ArgumentParser(description="Encrypt or decrypt an image.")
