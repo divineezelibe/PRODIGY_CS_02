@@ -1,6 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
 
+:: Set the path to the requirements.txt file
+set REQUIREMENTS_PATH=..\requirements.txt
+
 echo ==============================
 echo      Welcome to PixCrypt
 echo  Developed by Divine E. Ezelibe
@@ -48,7 +51,7 @@ echo.
 echo ==============================
 echo Installing required packages for PixCrypt...
 echo ==============================
-python -m pip install -r requirements.txt
+python -m pip install -r %REQUIREMENTS_PATH%
 if %ERRORLEVEL% NEQ 0 (
     echo.
     echo ERROR: An issue occurred while installing dependencies.
