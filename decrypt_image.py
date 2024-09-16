@@ -54,4 +54,4 @@ def decrypt_image(encrypted_image_path, key):
     new_file_path = os.path.join(directory, new_filename)
     original_image.save(new_file_path)
 
-    print(f"Your image is decrypted and saved as {new_file_path}")
+    #print(f"Your image is decrypted and saved as {new_file_path}")

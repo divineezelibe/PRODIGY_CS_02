@@ -56,5 +56,5 @@ def encrypt_image(image_path, key):
         # Write the encrypted image data
         f.write(encrypted_data)
 
-    print(f"Your image is manipulated, encrypted, and saved as {new_file_path}")
+    #print(f"Your image is manipulated, encrypted, and saved as {new_file_path}")
 
