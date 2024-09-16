@@ -3,6 +3,7 @@ from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.backends import default_backend
 from PIL import Image
 import numpy as np
+import os
 import struct  # Ensure this line is included to handle binary data packing/unpacking
 
 def decrypt_image(encrypted_image_path, key):
@@ -34,8 +35,10 @@ def decrypt_image(encrypted_image_path, key):
         decrypted_array = decrypted_array.reshape((img_height, img_width, 3))  # for RGB images
     elif img_mode == 'L':
         decrypted_array = decrypted_array.reshape((img_height, img_width))  # for grayscale images
+    elif img_mode == 'RGBA':
+        decrypted_array = decrypted_array.reshape((img_height, img_width, 4))  # for RGBA images
     else:
-        raise ValueError(f"Unsupported image mode: {img_mode}")
+        raise ValueError(f"An unsupported image mode: {img_mode}")
 
     # Convert the array back to an image and save it
     decrypted_img = Image.fromarray(decrypted_array, img_mode)
