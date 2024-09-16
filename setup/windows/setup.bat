@@ -1,8 +1,14 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Set the path to the requirements.txt file
-set REQUIREMENTS_PATH=..\requirements.txt
+:: Get the directory of the currently running script
+set "SCRIPT_DIR=%~dp0"
+
+:: Set the path to requirements.txt file
+set "REQUIREMENTS_PATH=%SCRIPT_DIR%..\requirements.txt"
+
+:: Resolve the absolute path
+for %%i in ("%REQUIREMENTS_PATH%") do set "REQUIREMENTS_PATH=%%~fi"
 
 echo ==============================
 echo      Welcome to PixCrypt
@@ -51,7 +57,7 @@ echo.
 echo ==============================
 echo Installing required packages for PixCrypt...
 echo ==============================
-python -m pip install -r %REQUIREMENTS_PATH%
+python -m pip install -r "%REQUIREMENTS_PATH%"
 if %ERRORLEVEL% NEQ 0 (
     echo.
     echo ERROR: An issue occurred while installing dependencies.

@@ -5,4 +5,7 @@ pillow  # For image opening, manipulation, and saving
 # Numerical operations library
 numpy  # For handling image arrays and mathematical operations
 
+#Cryptography library
+cryptography  # For encrypting and decrypting the image
+
 # We add additional libraries as will scale this project
