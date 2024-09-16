@@ -1,5 +1,3 @@
----
-
 # PixCrypt
 
 **PixCrypt** is a Python-based image encryption and decryption tool that combines pixel manipulation with full-image encryption. It allows users to securely encrypt their images and later decrypt them for viewing, making it ideal for protecting sensitive visual data. This project uses the AES encryption algorithm from the `cryptography` library.
