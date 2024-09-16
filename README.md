@@ -118,7 +118,7 @@ python PixCrypt.py -i "<path_to_image>" -k <encryption_key>
 Example:
 
 ```bash
-python PixCrypt.py -i "C:\Users\Username\Pictures\image.png" -k 12345 --encrypt
+python PixCrypt.py -i "C:\Users\Username\Pictures\image.png" -k 12345 
 ```
 
 ### Decrypt an Image
