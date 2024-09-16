@@ -93,8 +93,8 @@ If you prefer manual installation, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd PixCrypt
+   git clone https://github.com/divineezelibe/PRODIGY_CS_02.git
+   cd PRODIGY_CS_02
    ```
 
 2. Install dependencies:
