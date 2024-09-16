@@ -1,5 +1,3 @@
-Here's an updated `README.md` file tailored to your project:
-
 ---
 
 # PixCrypt
@@ -84,7 +82,7 @@ If you prefer manual installation, follow these steps:
 To encrypt an image, run the following command in your terminal:
 
 ```bash
-python PixCrypt.py -i "<path_to_image>" -k <encryption_key> --encrypt
+python PixCrypt.py -i "<path_to_image>" -k <encryption_key>
 ```
 
 - `<path_to_image>`: Path to the image you want to encrypt.
@@ -93,7 +91,7 @@ python PixCrypt.py -i "<path_to_image>" -k <encryption_key> --encrypt
 Example:
 
 ```bash
-python PixCrypt.py -i "C:\Users\Divine Ezelibe\Pictures\image.png" -k 12345 --encrypt
+python PixCrypt.py -i "C:\Users\Divine Ezelibe\Pictures\image.png" -k 12345
 ```
 
 ### Decrypt an Image
