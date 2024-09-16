@@ -73,9 +73,9 @@ If you don't have Python installed, download and install it from [python.org](ht
    cd PRODIGY_CS_02
    ```
 
-### Automated Setup
+### Next use the automated Setup
 
-#### Windows
+#### For Windows Users
 
 1. Open a terminal (Command Prompt or PowerShell).
 2. Run the following command to automatically set up dependencies:
@@ -83,7 +83,7 @@ If you don't have Python installed, download and install it from [python.org](ht
    setup\windows\setup.bat
    ```
 
-#### Unix/Linux
+#### For Unix Users
 
 1. Open a terminal.
 2. Run the following command to automatically install the required dependencies:
