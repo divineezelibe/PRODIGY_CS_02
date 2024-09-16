@@ -17,6 +17,8 @@ PixCrypt/
 ├── PixCrypt.py               # Main entry point for the program
 ├── decrypt_image.py          # Decryption logic for encrypted images
 ├── encrypt_image.py          # Encryption logic with pixel manipulation
+├── AUTHORS                   # List of authors and contributors
+├── LICENSE                   # License information (MIT)
 └── README.md                 # This README file
 ```
 
@@ -89,7 +91,7 @@ python PixCrypt.py -i "<path_to_image>" -k <encryption_key>
 Example:
 
 ```bash
-python PixCrypt.py -i "C:\Users\Divine Ezelibe\Pictures\image.png" -k 12345
+python PixCrypt.py -i "C:\Users\Username\Pictures\image.png" -k 12345 --encrypt
 ```
 
 ### Decrypt an Image
@@ -106,7 +108,7 @@ python PixCrypt.py -i "<path_to_encrypted_image>" -k <encryption_key> --decrypt
 Example:
 
 ```bash
-python PixCrypt.py -i "C:\Users\Divine Ezelibe\Pictures\encrypted_image.picr" -k 12345 --decrypt
+python PixCrypt.py -i "C:\Users\Username\Pictures\encrypted_image.picr" -k 12345 --decrypt
 ```
 
 ## Notes
@@ -123,10 +125,11 @@ PixCrypt relies on the following Python packages:
 - `Pillow`: For image processing.
 - `numpy`: For efficient array handling.
 
+## Authors
+
+- Divine Ezelibe – [GitHub](https://github.com/divineezelibe) | [LinkedIn](https://linkedin.com/in/divine-ezelibe) | Email: divineezelibe.e@gmail.com
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
-
-Feel free to make any changes or additions as necessary for your specific project needs.
