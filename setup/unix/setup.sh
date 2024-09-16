@@ -10,7 +10,7 @@ function error_exit {
 function show_spinner {
     local pid=$1
     local delay=0.1
-    local spinstr='|/-\'
+    local spinstr='|/-\'  # Spinner characters
     local temp
 
     while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
@@ -21,26 +21,27 @@ function show_spinner {
     printf "    \r"
 }
 
-# Get the directory containing this script
-SCRIPT_DIR="$(dirname "$(realpath "$0")")"
-PARENT_DIR="$(dirname "$SCRIPT_DIR")"
-
-# Path to the requirements.txt file
-REQUIREMENTS_FILE="$PARENT_DIR/requirements.txt"
-
 # Script Description
 echo "*************************************************"
 echo "*                                               *"
-echo "*         Interactive Setup Script for          *"
-echo "*            Python Project with Animations     *"
+echo "*            Welcome to PixCrypt Setup         *"
 echo "*                                               *"
-echo "* This script sets up the environment for       *"
-echo "* a Python project by installing required       *"
-echo "* packages and dependencies. It provides         *"
-echo "* interactive progress updates and animations.  *"
+echo "*  This script will clone the PixCrypt repository, *"
+echo "*  set up your environment, and install all       *"
+echo "*  necessary dependencies. Thank you for trying  *"
+echo "*  PixCrypt! This is the installation phase.      *"
 echo "*                                               *"
 echo "*************************************************"
 echo ""
+
+# Clone the PixCrypt repository
+echo "Cloning the PixCrypt repository..."
+git clone https://github.com/divineezelibe/PRODIGY_CS_02.git &> /dev/null &
+show_spinner $!
+
+# Change to the project directory
+echo "Changing directory to PixCrypt..."
+cd PRODIGY_CS_02 || error_exit "Failed to change directory to PRODIGY_CS_02."
 
 # Update package list
 echo "Updating package list..."
@@ -64,11 +65,11 @@ show_spinner $!
 
 # Install required Python packages from requirements.txt
 echo "Installing required Python packages..."
-if [ -f "$REQUIREMENTS_FILE" ]; then
-    python3 -m pip install -r "$REQUIREMENTS_FILE" &> /dev/null &
+if [ -f "requirements.txt" ]; then
+    python3 -m pip install -r "requirements.txt" &> /dev/null &
     show_spinner $!
 else
-    error_exit "requirements.txt file not found at $REQUIREMENTS_FILE. Ensure that this file is present in the correct directory."
+    error_exit "requirements.txt file not found. Ensure that this file is present in the correct directory."
 fi
 
 echo ""

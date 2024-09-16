@@ -14,9 +14,34 @@ echo ==============================
 echo      Welcome to PixCrypt
 echo  Developed by Divine E. Ezelibe
 echo ==============================
-echo This setup script will install the required Python dependencies for PixCrypt.
+echo PixCrypt: A tool for secure image encryption and decryption.
+echo Thank you for trying PixCrypt!
+echo This is the installation phase.
 echo.
-echo Let's begin the installation process!
+echo Let's begin the setup process!
+echo.
+
+:: Clone the repository
+echo Cloning the repository from GitHub...
+git clone https://github.com/divineezelibe/PRODIGY_CS_02.git
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo ERROR: An issue occurred while cloning the repository.
+    pause
+    exit /b 1
+)
+echo Repository cloned successfully.
+echo.
+
+:: Change to the project directory
+cd PRODIGY_CS_02
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo ERROR: An issue occurred while changing to the project directory.
+    pause
+    exit /b 1
+)
+echo Switched to the project directory.
 echo.
 
 REM Check if Python is installed
