@@ -1,11 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Get the directory of the currently running script
-set "SCRIPT_DIR=%~dp0"
-
 :: Set the path to requirements.txt file
-set "REQUIREMENTS_PATH=%SCRIPT_DIR%..\requirements.txt"
+set "REQUIREMENTS_PATH=%~dp0..\requirements.txt"
 
 :: Resolve the absolute path
 for %%i in ("%REQUIREMENTS_PATH%") do set "REQUIREMENTS_PATH=%%~fi"
@@ -19,29 +16,6 @@ echo Thank you for trying PixCrypt!
 echo This is the installation phase.
 echo.
 echo Let's begin the setup process!
-echo.
-
-:: Clone the repository
-echo Cloning the repository from GitHub...
-git clone https://github.com/divineezelibe/PRODIGY_CS_02.git
-if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo ERROR: An issue occurred while cloning the repository.
-    pause
-    exit /b 1
-)
-echo Repository cloned successfully.
-echo.
-
-:: Change to the project directory
-cd PRODIGY_CS_02
-if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo ERROR: An issue occurred while changing to the project directory.
-    pause
-    exit /b 1
-)
-echo Switched to the project directory.
 echo.
 
 REM Check if Python is installed
