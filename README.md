@@ -29,6 +29,33 @@ PixCrypt/
 - **Cross-platform Setup**: Automated setup for both Unix/Linux (`setup.sh`) and Windows (`setup.bat`) environments.
 - **Metadata Preservation**: The encrypted file contains image metadata such as dimensions and mode, ensuring accurate restoration after decryption.
 
+Sure, here's a shorter version:
+
+---
+
+## How It Works
+
+PixCrypt encrypts and decrypts images to keep them secure.
+
+### Encryption
+
+1. **Open the Image**: Read the image and get its pixel data.
+2. **Manipulate Pixels**: Slightly change the pixel data for added security.
+3. **Encrypt**: Use a secret key to scramble the pixel data with AES encryption.
+4. **Save**: Save the encrypted data along with extra info needed for decryption.
+
+### Decryption
+
+1. **Open Encrypted File**: Read the encrypted file and extract necessary info.
+2. **Decrypt**: Use the secret key to unscramble the data.
+3. **Restore Image**: Rebuild the image from the decrypted data and save it.
+
+In essence, PixCrypt secures your images by manipulating the pixels and  encrypting them and can later decrypt them and then reverse the manipulations to restore the original image.
+
+---
+
+This should provide a clear and concise overview of how PixCrypt works!
+
 ## Prerequisites
 
 Ensure that you have the following installed on your system:
