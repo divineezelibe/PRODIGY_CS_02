@@ -67,6 +67,12 @@ If you don't have Python installed, download and install it from [python.org](ht
 
 ## Setup Instructions
 
+ - Clone the repository:
+   ```bash
+   git clone https://github.com/divineezelibe/PRODIGY_CS_02.git
+   cd PRODIGY_CS_02
+   ```
+
 ### Automated Setup
 
 #### Windows
@@ -91,13 +97,7 @@ The setup scripts will automatically install all required dependencies using `pi
 
 If you prefer manual installation, follow these steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/divineezelibe/PRODIGY_CS_02.git
-   cd PRODIGY_CS_02
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
    ```bash
    pip install -r setup/requirements.txt
    ```
