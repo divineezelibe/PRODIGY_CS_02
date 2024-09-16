@@ -6,6 +6,11 @@ import numpy as np
 import os
 import struct
 
+def manipulate_pixels(img_array):
+    # Simple pixel manipulation by inverting the colors
+    manipulated_array = 255 - img_array  # Invert pixel colors
+    return manipulated_array
+
 def encrypt_image(image_path, key):
     # Ensure the key is 16 bytes long (AES requires a key of length 16, 24, or 32 bytes)
     key = str(key).ljust(16, ' ').encode('utf-8')[:16]
@@ -13,7 +18,12 @@ def encrypt_image(image_path, key):
     # Read the image and convert it to a byte array
     img = Image.open(image_path)
     img_array = np.array(img)
-    img_bytes = img_array.tobytes()
+    
+    # Manipulate the pixel values (invert colors in this case)
+    manipulated_array = manipulate_pixels(img_array)
+    
+    # Convert the manipulated image to bytes
+    img_bytes = manipulated_array.tobytes()
     
     img_mode = img.mode
     img_size = img.size  # (width, height)
@@ -46,4 +56,5 @@ def encrypt_image(image_path, key):
         # Write the encrypted image data
         f.write(encrypted_data)
 
-    print(f"Your image is encrypted and saved as {new_file_path}")
+    print(f"Your image is manipulated, encrypted, and saved as {new_file_path}")
+
